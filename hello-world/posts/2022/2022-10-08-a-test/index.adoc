@@ -2,7 +2,8 @@
 chalda <chalda@seznam.cz>
 1.0, 2022-10-08
 
-:page-published: true   
+:page-published: true
+:page-synopsis: Something about my friends 
 :page-title: Article
 :page-path: /2022/2022-10-08-a-test
 :page-category: Programming
@@ -11,4 +12,4 @@ How to work good?
 
 == How to start?
 
-Just start!
+Just start! 
