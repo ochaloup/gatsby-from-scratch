@@ -27,7 +27,6 @@ concurrency:
 defaults:
   run:
     shell: bash
-    working-directory: ./hello-world
 
 jobs:
   # Build job
@@ -39,16 +38,16 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          if [ -f "${{ github.workspace }}/${{working-directory}}/yarn.lock" ]; then
+          if [ -f "${{ github.workspace }}/hello-world/yarn.lock" ]; then
             echo "::set-output name=manager::yarn"
             echo "::set-output name=command::install"
             exit 0
-          elif [ -f "${{ github.workspace }}/${{working-directory}}/package.json" ]; then
+          elif [ -f "${{ github.workspace }}/hello-world/package.json" ]; then
             echo "::set-output name=manager::npm"
             echo "::set-output name=command::ci"
             exit 0
           else
-            echo "Unable to determine packager manager ${{github.working-directory}}"
+            echo "Unable to determine packager manager at ./hello-world"
             exit 1
           fi
       - name: Setup Node
@@ -56,6 +55,7 @@ jobs:
         with:
           node-version: "16"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+          cache-dependency-path: hello-world/package-lock.json
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
@@ -78,7 +78,7 @@ jobs:
       - name: Build with Gatsby
         env:
           PREFIX_PATHS: 'true'
-        run: ${{ steps.detect-package-manager.outputs.manager }} run build
+        run: cd ./hello-world && ${{ steps.detect-package-manager.outputs.manager }} run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
