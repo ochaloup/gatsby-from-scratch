@@ -7,4 +7,24 @@ Base of all is article https://www.freecodecamp.org/news/build-a-developer-blog-
 
 === How to get to Gatsby GraphQL?
 
-After `yarn dev` go to http://localhost:9988/___graphql
+After `yarn dev` the site is accessible at
+http://localhost:9988
+then the GraphQL query processor at http://localhost:9988/___graphql
+
+=== How to add Asciidoctor support?
+
+Work with
+https://www.gatsbyjs.com/plugins/gatsby-transformer-asciidoc/
+
+The configuration options for the plugin can be found at
+https://docs.asciidoctor.org/asciidoctor.js/latest/processor/convert-options/
+and options
+https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-ref/
+
+[source,sh]
+----
+# 1) configure the plugin
+yarn add gatsby-transformer-asciidoc
+
+# 2) add the plugin declaration (with configuration) into gatsby-config.js
+----

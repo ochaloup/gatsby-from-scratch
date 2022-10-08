@@ -1,0 +1,14 @@
+= Hello my friend
+chalda <chalda@seznam.cz>
+1.0, 2022-10-08
+
+:page-published: true   
+:page-title: Article
+:page-path: /2022/2022-10-08-a-test
+:page-category: Programming
+
+How to work good?
+
+== How to start?
+
+Just start!
