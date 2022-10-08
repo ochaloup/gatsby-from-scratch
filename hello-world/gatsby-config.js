@@ -4,6 +4,7 @@ const siteMetadata = {
 }
 
 module.exports = {
+    pathPrefix: `/gatsby-from-scratch`,
     siteMetadata: siteMetadata,
     plugins: [
       {

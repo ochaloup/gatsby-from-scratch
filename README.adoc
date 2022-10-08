@@ -137,6 +137,17 @@ See https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-wor
 
 [source,sh]
 ----
-# --> yarn add gh-pages
+yarn add gh-pages
+
+# building the gh pages see package.json
 yarn deploy
 ----
+
+Let's say we want the project page at address like `<username>.github.io/<projectname>`.
+
+. Then create github repository `projectname`.
+. Next push the sources to github.
+. Configure the project at GitHub in `Settings` -> `Pages`. The github pages could be used for deployment process.
+
+To correct working with path prefix we need to define `pathPrefix` in `gastby-config.js`
+and then run build with path prefix option, like `gastby build --path-prefix`.
