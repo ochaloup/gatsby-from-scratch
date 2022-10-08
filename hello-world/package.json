@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gatsby develop -p 9988 -o"
+    "dev": "gatsby develop -p 9988 -o",
+    "build": "gatsby build --prefix-paths"
   },
   "keywords": [],
   "author": "",
@@ -19,8 +20,10 @@
     "gatsby-plugin-styled-components": "^5.24.0",
     "gatsby-source-filesystem": "^4.24.0",
     "gatsby-transformer-asciidoc": "^3.24.0",
+    "html-react-parser": "^3.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "util": "^0.12.4"
   }
 }
