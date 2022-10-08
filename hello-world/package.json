@@ -4,9 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gatsby develop -p 9988 -o"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@mdx-js/mdx": "^2.1.4",
+    "@mdx-js/react": "^2.1.4",
+    "gatsby": "^4.24.3",
+    "gatsby-plugin-mdx": "^4.3.0",
+    "gatsby-source-filesystem": "^4.24.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
