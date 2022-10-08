@@ -68,13 +68,13 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            public
-            .cache
+            hello-world/public
+            hello-world/.cache
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: cd ./hello-world && ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Gatsby
         env:
           PREFIX_PATHS: 'true'
@@ -82,7 +82,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./public
+          path: ./hello-world/public
 
   # Deployment job
   deploy:
