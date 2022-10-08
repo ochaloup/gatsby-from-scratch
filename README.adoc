@@ -120,3 +120,23 @@ yarn add gatsby-transformer-asciidoc
   }
 }
 ====
+
+=== To build
+
+[source,sh]
+----
+# gatsby build --prefix-paths
+yarn build
+----
+
+Result can be found at `public/`.
+
+=== To work with github pages
+
+See https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-with-github-pages/
+
+[source,sh]
+----
+# --> yarn add gh-pages
+yarn deploy
+----
