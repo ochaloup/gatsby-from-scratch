@@ -151,3 +151,8 @@ Let's say we want the project page at address like `<username>.github.io/<projec
 
 To correct working with path prefix we need to define `pathPrefix` in `gastby-config.js`
 and then run build with path prefix option, like `gastby build --path-prefix`.
+
+==== Result
+
+See: http://chalda.cz/gatsby-from-scratch/
+And https://github.com/ochaloup/gatsby-from-scratch/blob/main/.github/workflows/pages.yml
