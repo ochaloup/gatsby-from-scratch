@@ -14,7 +14,7 @@ then the GraphQL query processor at http://localhost:9988/___graphql
 Testing graphql for Markdown and Asciidoctor
 
 [source,graphql]
-====
+----
 {
   allAsciidoc {
     edges {
@@ -54,7 +54,7 @@ Testing graphql for Markdown and Asciidoctor
     }
   }
 }
-====
+----
 
 For example I cannot find the `excerpt` from Markdown
 but it could be probably substituted with explicit definition of like `page-synopsis`
@@ -84,7 +84,7 @@ yarn add gatsby-transformer-asciidoc
 === GraphQL queries from Markdown to Asciidoctor
 
 [source,graphql]
-====
+----
 {
   allMdx(
     sort: { fields: [frontmatter___date], order: DESC }
@@ -110,7 +110,7 @@ yarn add gatsby-transformer-asciidoc
           title
         }
         pageAttributes {
-		  synopsis
+		      synopsis
         }
         revision {
           date
@@ -119,7 +119,40 @@ yarn add gatsby-transformer-asciidoc
     }
   }
 }
-====
+----
+
+=== Some more GraphQL queries for Asciidoc
+
+Working with categories, grouping.
+This seems to work fine with Markdown but not that good with Asciidoc structure.
+
+[source,graphql]
+----
+{
+  allMdx(
+    filter: {
+      frontmatter: { published: { eq: true } }
+    }
+    sort: { order: DESC, fields: [frontmatter___date] }
+  ) {
+    group(field: frontmatter___category) {
+      fieldValue
+      totalCount
+    }
+  }
+  allAsciidoc(
+    filter: {
+      pageAttributes: { published: { eq: "true" } }
+    }
+    sort: { order: DESC, fields: [revision___date] }
+  ) {
+    group(field: pageAttributes___category) {
+      fieldValue
+      totalCount
+    }
+  }
+}
+----
 
 === Markdown failures
 

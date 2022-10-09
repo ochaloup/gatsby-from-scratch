@@ -7,7 +7,8 @@ chalda <chalda@seznam.cz>
 :page-synopsis: Something about my friends 
 :page-title: Article
 :page-path: /2022/2022-10-08-a-test
-:page-category: Programming
+:page-category: Asciidoctor
+:page-tags: One, Two, Three
 
 How to work good?
 
