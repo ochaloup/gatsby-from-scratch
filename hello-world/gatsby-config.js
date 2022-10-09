@@ -25,7 +25,7 @@ module.exports = {
         resolve: `gatsby-transformer-asciidoc`,
         options: {
           attributes: {
-            showtitle: true,
+            showtitle: false,
           },
           extensions: [`.adoc`],
         },

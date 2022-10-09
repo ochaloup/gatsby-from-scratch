@@ -139,6 +139,16 @@ TODO: Try to check
       https://github.com/gatsbyjs/gatsby/discussions/34714
       https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#updating-page-templates
 
+The other thing is that some other template does not used the `mdx`
+plugin but they use plugin `gatsby-transformer-remark`.
+There is set of `remark` plugin that manages some details how mardown
+generation behaves - see `gatsby-remark-*` in the gatsby packages
+https://github.com/gatsbyjs/gatsby/tree/master/packages
+
+(e.g. one of them is `gatsby-remark-copy-linked-files` that takes files
+next to the `md` file and copies them to `public` directory where
+the result html pages are generated)
+
 
 === To build
 
