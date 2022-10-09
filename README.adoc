@@ -121,6 +121,25 @@ yarn add gatsby-transformer-asciidoc
 }
 ====
 
+=== Markdown failures
+
+I found that the tutorial says to place the tag
+`MDXRenderer` does not work.
+Error that can be seen is like
+
+====
+Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+====
+
+I was not able to find the reason and just finished with the tutorial.
+Maybe it's somehow connected with versions of gatsby as the tutorial
+is few years old.
+
+TODO: Try to check
+      https://github.com/gatsbyjs/gatsby/discussions/34714
+      https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#updating-page-templates
+
+
 === To build
 
 [source,sh]
