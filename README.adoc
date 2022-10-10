@@ -124,7 +124,6 @@ yarn add gatsby-transformer-asciidoc
 === Some more GraphQL queries for Asciidoc
 
 Working with categories, grouping.
-This seems to work fine with Markdown but not that good with Asciidoc structure.
 
 [source,graphql]
 ----
@@ -153,6 +152,10 @@ This seems to work fine with Markdown but not that good with Asciidoc structure.
   }
 }
 ----
+
+Now about tags that is in list. That seems to work better for Markdown
+as document attributes for Asciidoctor cannot be a list (probably).
+Post-parsing comma separated thing is needed.
 
 === Markdown failures
 

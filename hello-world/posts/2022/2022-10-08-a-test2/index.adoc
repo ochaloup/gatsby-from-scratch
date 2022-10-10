@@ -1,4 +1,4 @@
-= Hello from Asciidoc!!!
+= Hello from Asciidoc - Test2!!!
 chalda <chalda@seznam.cz>
 1.0, 2022-10-08
 
@@ -7,7 +7,8 @@ chalda <chalda@seznam.cz>
 :page-title: Article
 :page-path: /2022/2022-10-08-a-test
 :page-category: Asciidoctor
-:page-tags: One, Two, Three
+:page-tags: Four, Three
+:page-socialImage: /notebook.jpg
 :source-highlighter: highlight.js
 :highlightjs-languages: rust, swift
 :highlightjsdir: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js
